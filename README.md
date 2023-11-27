@@ -16,5 +16,7 @@ https://graduatecalc.000webhostapp.com/main.php
 
 ## 피드백 :
 quddlf775@naver.com
+<br>
 필수 과목인데 정보가 반영되지 않았다면 꼭 피드백 부탁드립니다.
+<br>
 많은 피드백 부탁드립니다.
