@@ -16,6 +16,7 @@
 - [ ] 대상 학번 추가
 - [ ] 필수 교양 체크
 - [ ] 대상 학과 추가
+- [ ] 코드 리팩토링
 
 ## 사용 주소:
 https://graduatecalc.000webhostapp.com/main.php
