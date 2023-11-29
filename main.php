@@ -61,13 +61,14 @@
     const selectedItems = [];
     const selects = document.getElementById('student_id');
 
+
     const name = selects.name;
     const value = selects.value;
     selectedItems.push({name,value});
 
     const jsonData = JSON.stringify(selectedItems);
-      document.cookie = "selectedItems=" + jsonData;
-      console.log(selectedItems);
+    var encodedData = encodeURIComponent(jsonData);
+      document.cookie = "selectedItems=" + encodedData;
       window.location.href = "./test.php";
     });
   </script>

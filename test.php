@@ -25,7 +25,6 @@
     <title>Dongguk Calc</title>
   </head>
   <body>
-    <div class="content">
       <div class="container">
         <h1 style="text-align: center;">동국대학교 졸업학점 계산기</h1>
         <hr>
@@ -89,7 +88,6 @@
         <button type="button" class="btn btn-secondary" id= "prev_btn">&lt; prev</button>
         <button type="button" class="btn btn-secondary" id= "next_btn">next &gt;</button>
       </div>
-    </div>
     
 
   </body>
@@ -106,7 +104,10 @@
 
     next.addEventListener("click", function () {
     let existingItems = getCookie("selectedItems");
-    existingItems = JSON.parse(existingItems);
+    var decodedCookie = decodeURIComponent(existingItems);
+    console.log(decodedCookie);
+    existingItems = JSON.parse(decodedCookie);
+    console.log(existingItems);
     const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
     checkboxes.forEach((checkbox) => {
       const name = checkbox.name;
@@ -114,12 +115,13 @@
       existingItems.push({name,value});
     });
     const jsonData = JSON.stringify(existingItems);
+    var encodedData = encodeURIComponent(jsonData);
     console.log(jsonData);
-      document.cookie = "selectedItems=" + jsonData;
+      document.cookie = "selectedItems=" + encodedData;
       window.location.href = "./test1.php";
     });
     prev.addEventListener("click", function () {
-      window.location.href = "./main.php";
+      window.location.assign("./main.php");
     });
   </script>
 </html>

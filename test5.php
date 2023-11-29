@@ -1,10 +1,6 @@
 <?php
-  $servername = "localhost";
-  $username = "root";
-  $password = "123qwe!@";
-  $database = "graduate_calc";
-
-  $selectedItems = json_decode($_COOKIE['selectedItems'], true);
+  require_once('dbConnection.php');
+  $selectedItems = json_decode(rawurldecode($_COOKIE['selectedItems']), true);
   $courseNum = array();//학수번호
   $needMajorCourseNum = array();//필수전공 학수번호
   //학점 변수

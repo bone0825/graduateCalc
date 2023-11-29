@@ -111,7 +111,10 @@
 
     next.addEventListener("click", function () {
     let existingItems = getCookie("selectedItems");
-    existingItems = JSON.parse(existingItems);
+    var decodedCookie = decodeURIComponent(existingItems);
+    console.log(decodedCookie);
+    existingItems = JSON.parse(decodedCookie);
+    console.log(existingItems);
     const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
     checkboxes.forEach((checkbox) => {
       const name = checkbox.name;
@@ -119,7 +122,9 @@
       existingItems.push({name,value});
     });
     const jsonData = JSON.stringify(existingItems);
-      document.cookie = "selectedItems=" + jsonData;
+    var encodedData = encodeURIComponent(jsonData);
+    console.log(jsonData);
+      document.cookie = "selectedItems=" + encodedData;
       window.location.href = "./test4.php";      
     });
     prev.addEventListener("click", function () {
