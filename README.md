@@ -30,6 +30,9 @@ https://graduatecalc.000webhostapp.com/main.php
 ## 피드백 :
 quddlf775@naver.com
 <br>
+피드백 해주신 분들 중 중요도로를 고려하여 소정의 감사상품을 드리고 있습니다.<br>
+ver1.1 또한 피드백을 통해 개선하였습니다.<br>
+<br>
 필수 과목인데 정보가 반영되지 않았다면 꼭 피드백 부탁드립니다.
 <br>
 많은 피드백 부탁드립니다.
